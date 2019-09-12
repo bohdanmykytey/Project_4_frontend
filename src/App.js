@@ -1,6 +1,7 @@
 import React from 'react'
+import FavoriteMovies from "./components/FavoriteMovies.js"
+import LandingPage from "./components/LandingPage.js"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import LandingPage from './components/LandingPage.js'
 
 class App extends React.Component {
  constructor(props){
@@ -12,11 +13,18 @@ class App extends React.Component {
 
  render() {
    return (
-     <div className="App">
-       <div className='container'>
-         <LandingPage />
-       </div>
-     </div>
+    <Router>
+      <div className="App">
+        <div className='container'>
+          <nav>
+            <Link to="/"> LandingPage </Link>
+            <Link to="/favorites"> FavoriteMovies </Link>
+          </nav>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/favorites" component={FavoriteMovies} />
+        </div>
+      </div>
+   </Router>
    )
  }
 }
