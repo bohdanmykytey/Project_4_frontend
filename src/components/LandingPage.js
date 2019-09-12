@@ -31,7 +31,7 @@ class LandingPage extends Component {
         <div>
             {
               this.state.movies.map(function(movies, i) {
-                return <div className='LandingPage' key={i}>{movies.original_title}</div>
+                return <div className='LandingPage' key={i}>{movies.original_title} </div>
               })
             }
         </div>
