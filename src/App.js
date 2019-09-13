@@ -1,7 +1,10 @@
 import React from 'react'
 import FavoriteMovies from "./components/FavoriteMovies.js"
 import LandingPage from "./components/LandingPage.js"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
+import NavBar from './components/NavBar.js'
+import 'foundation-sites/dist/css/foundation.min.css';
+import { Button, Colors } from 'react-foundation';
 
 class App extends React.Component {
  constructor(props){
@@ -16,10 +19,7 @@ class App extends React.Component {
     <Router>
       <div className="App">
         <div className='container'>
-          <nav>
-            <Link to="/"> LandingPage </Link>
-            <Link to="/favorites"> FavoriteMovies </Link>
-          </nav>
+          <NavBar />
         <Route path="/" exact component={LandingPage} />
         <Route path="/favorites" component={FavoriteMovies} />
         </div>

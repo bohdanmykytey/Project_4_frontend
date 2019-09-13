@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import 'foundation-sites/dist/css/foundation.min.css';
+import { Button, Colors } from 'react-foundation';
+
 
 class FavoriteMovies extends Component {
 	constructor(props){
@@ -29,10 +32,15 @@ class FavoriteMovies extends Component {
   render () {
     return (
         <div>
-          <h1> Welcome! </h1>
+            <div className="search">
+              <input class="animated-search-form" type="text" label="Search Movies" placeholder="Search..."></input>
+              <input type="submit" value="Search"></input>
+            </div>
             {
               this.state.movies.map(function(movies, i) {
-                return <div className='Favorites' key={i}>{movies.original_title} </div>
+                return (
+                <div className='Favorites' key={i}>{movies.original_title} </div>
+                )
               })
             }
         </div>

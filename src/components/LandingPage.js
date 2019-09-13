@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import 'foundation-sites/dist/css/foundation.min.css';
+import { Button, Colors } from 'react-foundation';
 
 class LandingPage extends Component {
 	constructor(props){
@@ -30,9 +32,17 @@ class LandingPage extends Component {
     return (
         <div>
           <h1> Welcome! </h1>
+          <h4> Here are the Top 20 most popular movies out right now </h4> 
             {
               this.state.movies.map(function(movies, i) {
-                return <div className='LandingPage' key={i}>{movies.original_title} </div>
+                return  (
+                        <div key={i} className="media-object stack-for-small">
+                          <div className="media-object-section">
+                            {movies.original_title}
+                            {movies.overwiev}
+                          </div>
+                        </div>
+                )
               })
             }
         </div>
