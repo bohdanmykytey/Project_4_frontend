@@ -23,7 +23,6 @@ class FavoriteMovies extends Component {
     const response = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=2f75b3be3b1abaafec8e67b4f6622bb3&query=${query}`
     );
-    console.log(response);
     console.log(response.data.results);
     this.setState({
       movies: response.data.results
@@ -47,7 +46,7 @@ class FavoriteMovies extends Component {
         <div className="search">
           <form onSubmit={this.handleInputChange}>
             <input
-              class="animated-search-form"
+              className="animated-search-form"
               type="text"
               label="Search Movies"
               placeholder="Search for movies..."
@@ -60,7 +59,9 @@ class FavoriteMovies extends Component {
         {this.state.movies.map(function(movies, i) {
           return (
             <div className="Favorites" key={i}>
-              {movies.original_title}{" "}
+              Title: {movies.original_title}
+              <ul>Description: <p>{movies.overview}</p></ul>
+              <ul>Release Date: {movies.release_date}</ul>
             </div>
           );
         })}
