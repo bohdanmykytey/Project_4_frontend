@@ -42,14 +42,14 @@ class FavoriteMovies extends Component {
 
   render() {
     return (
-      <div>
-        <div className="search">
+      <div className="callout sucsess">
+        <div className="">
           <form onSubmit={this.handleInputChange}>
             <input
-              className="animated-search-form"
+              className="search-input-animated"
               type="text"
               label="Search Movies"
-              placeholder="Search for movies..."
+              placeholder="Search for movies or shows..."
               ref={input => (this.search = input)}
               onChange={this.handleQuery}
             />

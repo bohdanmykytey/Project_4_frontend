@@ -30,13 +30,13 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="callout success" data-closable="slide-out-right">
         <h1> Welcome! </h1>
         <h4> Here are the Top 20 most popular movies out right now </h4>
         {this.state.movies.map(function(movies, i) {
           return (
-            <div key={i} className="media-object stack-for-small">
-              <div className="media-object-section">
+            <div key={i}>
+              <div>
                 {movies.original_title}
                 {movies.overwiev}
               </div>
