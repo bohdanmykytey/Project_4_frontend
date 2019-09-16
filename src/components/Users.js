@@ -13,7 +13,12 @@ class Users extends React.Component {
             homepage: "",
             original_title: "",
             overwiev: "",
-            popularity: ""
+            popularity: "",
+            
+            users: [],
+            f_name: '',
+            l_name: '',
+            id: ''
         };
   
       this.handleChange = this.handleChange.bind(this);
@@ -22,7 +27,7 @@ class Users extends React.Component {
   
     getUsers = async query => {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/search/movie?api_key=2f75b3be3b1abaafec8e67b4f6622bb3&query=${query}`
+          `localhost:3000/users/1`
         );
         console.log(response.data.results);
         this.setState({
@@ -41,17 +46,9 @@ class Users extends React.Component {
   
     render() {
       return (
-        <ul>
-            <li>
-                movie 1
-            </li>
-            <li>
-                movie 2
-            </li>
-            <li>
-                etc
-            </li>
-        </ul>
+        <div>
+
+        </div>
       );
     }
   }

@@ -19,10 +19,7 @@ code {
 
 .footerMain {
   display: inline-flex;
-  height: 30px;
-  margin: 0 auto;
   width: 100%;
-
 }
 
 .footerColumn {
@@ -55,10 +52,8 @@ code {
 }
 
 .created  {
-  padding-left: 20px;
-  padding-top: 5px;
+  height: 15px;
 }
-
 .mainPage {
   border: 1px lightskyblue;
 }
