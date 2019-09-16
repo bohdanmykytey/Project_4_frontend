@@ -14,9 +14,10 @@ class FavoriteMovies extends Component {
       original_title: "",
       overwiev: "",
       popularity: "",
-      query: ""
+      query: "",
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   getInfo = async query => {
@@ -31,6 +32,9 @@ class FavoriteMovies extends Component {
 
   handleInputChange = event => {
     event.preventDefault();
+    this.setState({
+      isClicked: true
+    })
     this.getInfo(this.state.query);
   };
 
@@ -39,6 +43,11 @@ class FavoriteMovies extends Component {
       query: this.search.value
     });
   };
+
+  handleClick(event) {
+    event.preventDefault();
+    console.log("clicked");
+  }
 
   render() {
     return (
@@ -56,15 +65,20 @@ class FavoriteMovies extends Component {
             <input type="submit" value="Search"></input>
           </form>
         </div>
-        {this.state.movies.map(function(movies, i) {
-          return (
-            <div className="Favorites" key={i}>
-              Title: {movies.original_title}
-              <ul>Description: <p>{movies.overview}</p></ul>
-              <ul>Release Date: {movies.release_date}</ul>
-            </div>
-          );
-        })}
+
+        <div onClick={this.handleClick} >
+          {this.state.movies.map(function(movies, i) {
+            return (
+              <div className="Favorites" key={i}>
+                Title: {movies.original_title}
+                <ul>
+                  Description: <p>{movies.overview}</p>
+                </ul>
+                <ul>Release Date: {movies.release_date}</ul>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -6,13 +6,16 @@ import { Button, Colors } from "react-foundation";
 class Footer extends Component {
   render() {
     return (
-        <div className="Footer">   
-            <div className="wrap row">
-                <div className="column"></div>
-                <div className="column"></div>
-                <div className="column"></div>
+        <footer>
+            <div className="footerMain">
+                <div className="footerColumn">
+                    By: Bohdan Mykytey
+                </div>
+                <div className="footerColumn">
+                    @ General Assembly 
+                </div>
             </div>
-        </div>  
+        </footer>  
     );
   }
 }

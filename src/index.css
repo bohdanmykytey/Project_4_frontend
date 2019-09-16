@@ -13,4 +13,33 @@ code {
     monospace;
 }
 
+.callout  {
+  text-align: center;
+}
 
+.footerMain {
+  display: inline-flex;
+  height: 300px;
+  text-align: center;
+  width: 100%;;
+}
+
+.footerColumn {
+  border: 5 px;
+}
+
+.Favorites  {
+  background-color: lightcyan;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-radius: 25px;
+}
+
+.input  {
+  border: 20px;
+}
+
+.mainPage  {
+  height: 40px;
+}
