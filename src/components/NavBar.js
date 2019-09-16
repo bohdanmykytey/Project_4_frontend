@@ -11,10 +11,13 @@ class NavBar extends Component {
           <ul className="dropdown menu" data-dropdown-menu>
             <li className="menu-text"> Whats Your Favorite Movie? </li>
             <li>
-              <NavLink to="/"> LandingPage </NavLink>
+              <NavLink to="/"> Landing Page </NavLink>
             </li>
             <li>
-              <NavLink to="/favorites"> FavoriteMovies </NavLink>
+              <NavLink to="/favorites"> Favorite Movies </NavLink>
+            </li>
+            <li>
+              <NavLink to="/users/1"> Your Movies </NavLink>
             </li>
           </ul>
         </div>

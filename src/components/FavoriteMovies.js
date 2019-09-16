@@ -66,16 +66,18 @@ class FavoriteMovies extends Component {
           </form>
         </div>
 
-        <div onClick={this.handleClick} >
+        <div onClick={this.handleClick}>
           {this.state.movies.map(function(movies, i) {
             return (
-              <div className="Favorites" key={i}>
-                Title: {movies.original_title}
-                <ul>
-                  Description: <p>{movies.overview}</p>
-                </ul>
-                <ul>Release Date: {movies.release_date}</ul>
-              </div>
+              <div>
+                <div className="Favorites" key={i}>
+                  Title: {movies.original_title}
+                  <div>
+                    Description: <p>{movies.overview}</p>
+                  </div>
+                  <div>Release Date: {movies.release_date}</div>
+                </div>
+              </div>  
             );
           })}
         </div>

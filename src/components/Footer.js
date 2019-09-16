@@ -8,12 +8,14 @@ class Footer extends Component {
     return (
         <footer>
             <div className="footerMain">
-                <div className="footerColumn">
-                    By: Bohdan Mykytey
+                <div className="created"> 
+                    Created by: Bohdan Mykytey
                 </div>
-                <div className="footerColumn">
-                    @ General Assembly 
-                </div>
+            </div>
+            <div className="footerLinks"> 
+                    <a class="button succsess" target="_blank" href="https://github.com/bohdanmykytey"> Githhub </a>
+                    <a class="button succsess" target="_blank" href="https://www.linkedin.com/in/bohdanmykytey/"> LinkedIn </a>
+                    <a class="button succsess" target="_blank" href=""> Portfolio </a>
             </div>
         </footer>  
     );

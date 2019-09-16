@@ -6,6 +6,7 @@ import NavBar from './components/NavBar.js'
 import 'foundation-sites/dist/css/foundation.min.css';
 import Footer from './components/Footer.js'
 import { Button, Colors } from 'react-foundation';
+import Users from './components/Users.js'
 
 class App extends React.Component {
  constructor(props){
@@ -20,9 +21,10 @@ class App extends React.Component {
     <Router>  
       <div className="App">
         <div className='container'>
-          <NavBar />
+        <NavBar />
         <Route path="/" exact component={LandingPage} />
         <Route path="/favorites" component={FavoriteMovies} />
+        <Route path="/users/1" component={Users} />
         <Footer />
         </div>
       </div>
