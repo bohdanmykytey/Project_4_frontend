@@ -17,7 +17,7 @@ class NavBar extends Component {
               <NavLink to="/favorites"> Favorite Movies </NavLink>
             </li>
             <li>
-              <NavLink to="/users/1"> Your Movies </NavLink>
+              <NavLink to="/users"> Your Movies </NavLink>
             </li>
           </ul>
         </div>

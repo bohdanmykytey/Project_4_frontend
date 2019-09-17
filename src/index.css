@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: blue;
 }
 
 code {
@@ -56,4 +55,13 @@ code {
 }
 .mainPage {
   border: 1px lightskyblue;
+}
+
+li  {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  font-weight: bold;
 }

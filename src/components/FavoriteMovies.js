@@ -3,6 +3,7 @@ import axios from "axios";
 import "foundation-sites/dist/css/foundation.min.css";
 import { Button, Colors } from "react-foundation";
 
+
 class FavoriteMovies extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,7 @@ class FavoriteMovies extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.postMovies = this.postMovies.bind(this)
   }
 
   getInfo = async query => {
@@ -46,8 +48,32 @@ class FavoriteMovies extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    console.log("clicked");
+    // console.log(event.currentTarget.id);
+    const index = event.currentTarget.id
+    // console.log(this.state.movies)
+    const moviesArray = this.state.movies
+    const movie = moviesArray[index]
+    // console.log(movie)
+    this.postMovies(movie)
   }
+
+  postMovies = async (movie) => {
+    console.log(movie)
+    let data = {
+      rated_r: movie.rated_r,
+      budget: movie.budget,
+      homepage: movie.homepage,
+      original_title: movie.original_title,
+      overwiev: movie.overview,
+      popularity: movie.popularity,
+    }
+    const response = await axios.post(
+      'https://project4api.herokuapp.com/movies', data
+    );
+    console.log(response)
+    console.log(data);
+  }
+
 
   render() {
     return (
@@ -66,22 +92,18 @@ class FavoriteMovies extends Component {
           </form>
         </div>
 
-        <div onClick={this.handleClick}>
-          {this.state.movies.map(function(movies, i) {
+          {this.state.movies.map((movies, i) => {
             return (
-              <div>
-                <div className="Favorites" key={i}>
+                <div onClick={this.handleClick} className="Favorites" id={i} key={i}>
                   Title: {movies.original_title}
                   <div>
                     Description: <p>{movies.overview}</p>
                   </div>
                   <div>Release Date: {movies.release_date}</div>
                 </div>
-              </div>  
             );
           })}
         </div>
-      </div>
     );
   }
 }

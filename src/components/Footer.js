@@ -13,9 +13,9 @@ class Footer extends Component {
                 </div>
             </div>
             <div className="footerLinks"> 
-                    <a class="button succsess" target="_blank" href="https://github.com/bohdanmykytey"> Githhub </a>
-                    <a class="button succsess" target="_blank" href="https://www.linkedin.com/in/bohdanmykytey/"> LinkedIn </a>
-                    <a class="button succsess" target="_blank" href=""> Portfolio </a>
+                    <a className="button succsess" target="_blank" href="https://github.com/bohdanmykytey"> Githhub </a>
+                    <a className="button succsess" target="_blank" href="https://www.linkedin.com/in/bohdanmykytey/"> LinkedIn </a>
+                    <a className="button succsess" target="_blank" href=""> Portfolio </a>
             </div>
         </footer>  
     );
