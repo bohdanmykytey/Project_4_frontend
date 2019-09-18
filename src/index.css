@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -19,6 +21,9 @@ code {
 .footerMain {
   display: inline-flex;
   width: 100%;
+  position: relative;
+  bottom: -0;
+  padding-bottom: 40px;
 }
 
 .footerColumn {
@@ -60,8 +65,32 @@ code {
 li  {
   text-align: center;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   height: 25px;
   font-weight: bold;
+}
+
+.nav  {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  height: 25px;
+  font-weight: bold;
+  max-width: 70%;
+}
+
+.primary callout  {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer div {
+  border-right: 5px solid #ff0000;
+}
+
+footer div:last-child {
+  border-right: 0;
 }

@@ -51,9 +51,11 @@ class SavedMovies extends React.Component {
       <>
       {this.state.movies.map((movies, i) => {
         return (
-          <ul key={i}>
-              <li> Title: {movies.original_title}  </li>
-          </ul>    
+          <div className="primary callout">
+            <ul key={i}>
+                <li> Title: {movies.original_title}  </li>
+            </ul>    
+          </div>
           );
         })}
       </>

@@ -30,17 +30,15 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="callout success">
+      <div className="primary callout">
         <h1> Welcome! </h1>
         <h4> Here are the Top 20 most popular movies out right now </h4>
         {this.state.movies.map(function(movies, i) {
           return (
-            <div key={i}>
-              <div className="mainPage">
-                {movies.original_title}
-                {movies.overwiev}
-              </div>
-            </div>
+              <ul key={i}>
+                <li>{movies.original_title}</li>
+                <li>{movies.overwiev}</li>
+              </ul>
           );
         })}
       </div>

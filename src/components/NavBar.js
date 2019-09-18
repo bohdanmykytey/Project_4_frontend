@@ -19,6 +19,15 @@ class NavBar extends Component {
             <li>
               <NavLink to="/users"> Your Movies </NavLink>
             </li>
+            <li>   
+              <a className="nav" target="_blank" href="https://github.com/bohdanmykytey"> Githhub </a>
+            </li> 
+            <li>  
+              <a className="nav" target="_blank" href="https://www.linkedin.com/in/bohdanmykytey/"> LinkedIn </a>
+            </li>
+            <li>
+              <a className="nav" target="_blank" href="https://bohdan-mykytey.netlify.com/"> Portfolio </a>
+            </li>
           </ul>
         </div>
       </div>

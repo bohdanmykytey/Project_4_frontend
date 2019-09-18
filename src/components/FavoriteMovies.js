@@ -94,8 +94,8 @@ class FavoriteMovies extends Component {
 
           {this.state.movies.map((movies, i) => {
             return (
-                <div onClick={this.handleClick} className="Favorites" id={i} key={i}>
-                  Title: {movies.original_title}
+                <div onClick={this.handleClick} className="primary callout" id={i} key={i}>
+                  <h1> Title: {movies.original_title} </h1>
                   <div>
                     Description: <p>{movies.overview}</p>
                   </div>
